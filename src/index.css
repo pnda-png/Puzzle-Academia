@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lexend:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Lexend", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", sans-serif;
+
+  --color-primary: #0042b9;
+  --color-primary-container: #2a5bd7;
+  --color-primary-fixed: #dbe1ff;
+  
+  --color-secondary: #006c49;
+  --color-secondary-container: #6cf8bb;
+  
+  --color-tertiary: #6d4400;
+  --color-tertiary-container: #8e5900;
+  --color-tertiary-fixed: #ffddb8;
+  
+  --color-surface: #f8f9ff;
+  --color-surface-container: #e6eeff;
+  --color-surface-container-low: #eff4ff;
+  --color-surface-container-high: #dce9ff;
+  --color-surface-container-highest: #d5e3fc;
+  
+  --color-on-surface: #0d1c2e;
+  --color-on-surface-variant: #434654;
+  
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-3xl: 2rem;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
